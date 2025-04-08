@@ -2,9 +2,8 @@ name: Build UnlimitedBooks Mod
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -14,23 +13,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Java 17
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
 
-      - name: Make gradlew executable
+      - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Fix gradle-wrapper.jar permissions
-        run: chmod +x gradle/wrapper/gradle-wrapper.jar
-
-      - name: Build the mod
+      - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Upload Build Artifacts
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: UnlimitedBooks
-          path: build/libs/*.jar
+          name: mod-artifact
+          path: build/libs/
