@@ -20,12 +20,3 @@ jobs:
 
     - name: Make gradlew executable
       run: chmod +x ./gradlew
-
-    - name: Build the mod
-      run: ./gradlew build
-
-    - name: Upload built mod
-      uses: dawidd6/action-upload-artifact@v2
-      with:
-        name: UnlimitedBooksMod
-        path: build/libs/*.jar
