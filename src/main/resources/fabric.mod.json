@@ -1,21 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "unlimitedbooks",
-  "version": "1.0.0",
-  "name": "Unlimited Books",
-  "description": "A mod to remove page limits on Minecraft books.",
-  "authors": ["harryisadag"],
-  "contact": {},
-  "license": "MIT",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.harryisadag.unlimitedbooks.UnlimitedBooks"
-    ]
-  },
-  "depends": {
-    "fabricloader": ">=0.15.6",
-    "fabric": "*",
-    "minecraft": "1.20.4"
-  }
+    "schemaVersion": 1,
+    "id": "modid",
+    "version": "${version}",
+    "name": "Example mod",
+    "description": "This is an example description! Tell everyone what your mod is about!",
+    "authors": [
+        "Me!"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "CC0-1.0",
+    "icon": "assets/modid/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.example.ExampleMod"
+        ],
+        "client": [
+            "com.example.ExampleModClient"
+        ]
+    },
+    "mixins": [
+        "unlimitedbooks.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.10",
+        "minecraft": "~1.21.5",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }
