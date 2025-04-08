@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,8 +29,13 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Upload built mod JAR
+    - name: Archive JAR
+      run: |
+        mkdir -p artifacts
+        cp build/libs/*.jar artifacts/
+
+    - name: Upload artifact manually
       uses: actions/upload-artifact@v3
       with:
         name: UnlimitedBooksMod
-        path: build/libs/*.jar
+        path: artifacts/
