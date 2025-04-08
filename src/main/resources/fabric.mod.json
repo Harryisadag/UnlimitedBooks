@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "unlimitedbooks",
+  "version": "1.0.0",
+  "name": "Unlimited Books",
+  "description": "A mod to remove page limits on Minecraft books.",
+  "authors": ["harryisadag"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.harryisadag.unlimitedbooks.UnlimitedBooks"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.6",
+    "fabric": "*",
+    "minecraft": "1.20.4"
+  }
+}
