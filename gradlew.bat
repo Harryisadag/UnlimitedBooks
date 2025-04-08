@@ -1,2 +1,3 @@
 @echo off
-echo Gradle wrapper for Windows
+set DIR=%~dp0
+"%DIR%\gradle\wrapper\gradle-wrapper.jar" %*
