@@ -1,2 +1,2 @@
 #!/bin/sh
-# Gradle wrapper for Unix
+echo Gradle wrapper

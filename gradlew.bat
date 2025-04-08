@@ -1,2 +1,2 @@
 @echo off
-rem Gradle wrapper for Windows
+echo Gradle wrapper for Windows
